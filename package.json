@@ -1,0 +1,29 @@
+{
+  "name": "minecraft-server-bot",
+  "version": "1.0.0",
+  "description": "A discord bot that can start and stop a minecraft server",
+  "main": "bot.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwagCheese/minecraft-discord-bot.git"
+  },
+  "keywords": [
+    "minecraft",
+    "discord",
+    "bot",
+    "server"
+  ],
+  "author": "SwagCheese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwagCheese/minecraft-discord-bot/issues"
+  },
+  "homepage": "https://github.com/SwagCheese/minecraft-discord-bot#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "discord.js": "^14.9.0",
+    "fs": "^0.0.1-security",
+    "minecraft-server-util": "^5.4.2",
+    "path": "^0.12.7"
+  }
+}

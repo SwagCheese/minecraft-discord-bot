@@ -26,14 +26,14 @@ client.on('messageCreate', msg => {
 
     switch (msg.content) {
         case 'start':
-            util.status(config.serverIp).then(() => {
+            util.statusLegacy(config.serverIp, config.serverPort).then(() => {
                 msg.channel.send('ERROR: Cannot start server because it is already running.')
             }).catch(async () => {
                 msg.channel.send('Starting the server...')
                 child_process.exec(config.serverStartCommand)
                 let counter = 0
                 while (counter !== -1 && counter < config.serverStartTimeout) {
-                    util.status(config.serverIp).then(() => {
+                    util.statusLegacy(config.serverIp, config.serverPort).then(() => {
                         rcon.connect('localhost')
                         msg.channel.send('The server has started.')
                         counter = -1
@@ -45,7 +45,7 @@ client.on('messageCreate', msg => {
             })
             break
         case 'stop':
-            util.status(config.serverIp).then(status => {
+            util.statusLegacy(config.serverIp, config.serverPort).then(status => {
                 if (status.onlinePlayers === 0 || config.operators.includes(msg.author.id.toString())) {
                     msg.channel.send('Stopping the server...')
                     rcon.execute('stop').finally(() => {
@@ -63,7 +63,7 @@ client.on('messageCreate', msg => {
         case 'exec':
         case 'execute':
             if (config.operators.includes(msg.author.id.toString())) {
-                util.status(config.serverIp).then(() => {
+                util.statusLegacy(config.serverIp, config.serverPort).then(() => {
                     rcon.execute(msg.content).then(response => {
                         msg.channel.send(`SERVER: ${response}`)
                     })

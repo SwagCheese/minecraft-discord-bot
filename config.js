@@ -2,7 +2,8 @@ const config = {
   prefix: '!', // the symbol used when telling the discord bot to do something
   serverStartCommand: 'SERVER START COMMAND', // command to start the server (I recommended putting nogui at the end of the command to remove the server dashboard)
   serverStartTimeout: 300, // after this many seconds, the bot will give up on waiting for the server to start
-  serverIp: 'IP:PORT', // the server ip and port
+  serverIp: 'IP', // the server ip
+  serverPort: 25565, // the server port
   token: 'TOKEN', // your bot's token
   rcon_port: 25575, // the port that rcon is running on
   rcon_password: '1234', // the password used to connect to rcon

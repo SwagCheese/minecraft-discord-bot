@@ -15,6 +15,10 @@ Try modifying this code using [selenium webdriver](https://www.npmjs.com/package
 6) edit the variables in the `config.js` file to your liking
 
 ### USAGE:
+#### Starting the bot:
+1) open a terminal in the directory where you installed the bot (use `cd <directory>` to navigate)
+2) run the command `node .`
+#### Commands:
 * {prefix}start: starts the server 
 * {prefix}stop: stops the server 
 * {prefix}execute: executes a command on the server. Your user id must be in the operators array in the `config.js` file for this to work

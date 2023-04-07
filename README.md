@@ -17,7 +17,7 @@ Try modifying this code using [selenium webdriver](https://www.npmjs.com/package
 ### USAGE:
 #### Starting the bot:
 1) open a terminal in the directory where you installed the bot (use `cd <directory>` to navigate)
-2) run the command `node .`
+2) in that same terminal, run the command `node .` to start the bot
 #### Commands:
 * {prefix}start: starts the server 
 * {prefix}stop: stops the server 
